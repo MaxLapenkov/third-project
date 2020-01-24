@@ -36,7 +36,7 @@ input[type="radio"].visually-hidden {
 .button {
   color: white;
   display: inline-block;
-  padding: 20px 50px;
+  padding: 18px 40px;
   margin-right: 16px;
   font: inherit;
   text-align: center;
@@ -68,12 +68,12 @@ header {
   padding-top: 50px;
   position: relative;
   &__navigation {
-    &-logo{
+    &-logo {
       &:hover,
-      &:focus{
+      &:focus {
         opacity: 0.8;
       }
-      &:active{
+      &:active {
         opacity: 0.3;
       }
     }
@@ -122,8 +122,8 @@ header {
         }
       }
     }
-    &-site{
-      .active{
+    &-site {
+      .active {
         position: relative;
         &::after {
           content: "";
@@ -164,9 +164,8 @@ header {
         height: 100%;
       }
     }
-    
   }
-  &-buttons{
+  &-buttons {
     position: absolute;
     content: "";
     height: 20px;
@@ -177,21 +176,20 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    &-item{
+    &-item {
       border: none;
       cursor: pointer;
       width: 20px;
       height: 20px;
       background-color: white;
       border-radius: 50%;
-      &.current{
+      &.current {
         background-image: url("../img/active-button.png");
         background-repeat: no-repeat;
         background-position: 50% 50%;
       }
     }
-   
-}
+  }
 }
 .offer {
   @include padding();
@@ -218,10 +216,10 @@ header {
     .button2 {
       background-color: #00ca74;
       &:hover,
-      &:focus{
+      &:focus {
         background-color: #00bc6c;
       }
-      &:active{
+      &:active {
         background-color: #00aa62;
         color: #38bd84;
       }
@@ -229,10 +227,10 @@ header {
     .button3 {
       background-color: #efc84a;
       &:hover,
-      &:focus{
+      &:focus {
         background-color: #eab534;
       }
-      &:active{
+      &:active {
         background-color: #e5a722;
         color: #ebba53;
       }
@@ -336,10 +334,10 @@ header {
     &-link {
       opacity: 0.3;
       &:hover,
-      &:focus{
+      &:focus {
         opacity: 1;
       }
-      &:active{
+      &:active {
         opacity: 0.2;
       }
     }
@@ -409,10 +407,10 @@ header {
       background-color: #e1e1e1;
       border-radius: 50%;
       &:hover,
-      &:focus{
+      &:focus {
         background-color: #e74246;
       }
-      &:active{
+      &:active {
         background-color: #d7373b;
         path {
           fill: #e37376;
@@ -438,6 +436,151 @@ header {
     }
   }
 }
-.none{
+.modal-login {
   display: none;
+  position: fixed;
+  background-color: white;
+  color: black;
+  top: 120px;
+  left: 50%;
+  width: 760px;
+  padding: 85px 100px;
+  margin-left: -465px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+  h2 {
+    @include medium();
+    font-size: 45px;
+    line-height: 45px;
+    margin: 0;
+    margin-bottom: 55px;
+  }
+  p {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  &-form{
+    label{
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 14px;
+    }
+    input[type="text"],
+      input[type="email"] {
+        font: inherit;
+        font-weight: bold;
+        color: #000000;
+        opacity: 0.5;
+        background-color: white;
+        border: 2px solid black;
+        box-sizing: border-box;
+        width: 360px;
+        padding: 15px;
+        margin-bottom: 35px;
+        &:hover,
+        &:focus{
+          opacity: 1;
+        }
+        &::placeholder{
+          color: black;
+        }
+        
+      }
+      .text{
+        font-weight: bold;
+        border: 2px solid black;
+        box-sizing: border-box;
+        padding: 15px;
+        &::placeholder{
+          color: black;
+          font-weight: bold;
+        }
+        font: inherit;
+        color: #000000;
+        opacity: 0.5;
+        background-color: white;
+        &:hover,
+        &:focus{
+          opacity: 1;
+        }
+      }
+    &-wrapper{
+      display: flex;
+      justify-content: space-between;
+    }
+    .button{
+      margin-top: 47px;
+      width: 260px;
+    }
+  }
+  .close {
+    position: absolute;
+    top: 85px;
+    right: 8%;
+    width: 25px;
+    height: 25px;
+    font-size: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    &::before,
+    &::after {
+      top: 9px;
+      left: 1px;
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 4px;
+      background-color: #fb565a;
+      opacity: 1;
+      
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+//---Внутренние страницы---
+.header-inner{
+  h1{
+    text-align: center;
+    @include medium();
+    font-size: 55px;
+    line-height: 55px;
+    margin: 0;
+    margin-top: 80px;
+    padding-bottom: 120px;
+  }
+}
+//---/Внутренние страницы---
+
+.none {
+  display: none;
+}
+.block{
+  display: block;
+}
+.modal-error-login {
+  
+  
+    input[type="text"]
+      {
+        border-color: #fb565a;
+        color: #fb565a;
+      }
+  
+}
+.modal-error-email {
+  
+  
+  input[type="email"]
+    {
+      border-color: #fb565a;
+      color: #fb565a;
+    }
+
 }

@@ -21,7 +21,7 @@
                 <ul class="main-header__navigation-site">
                     <li><a href="#" class="active">Cтудия</a></li>
                     <li><a href="#">Клиенты</a></li>
-                    <li><a href="#">Магазин</a></li>
+                    <li><a href="catalog.html">Магазин</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
                 <ul class="main-header__navigation-user">
@@ -181,7 +181,7 @@
                         ул. Б. Конюшенная, д. 19/8 <br> <br>
 
                         тел. +7 (812) 275-75-75</p>
-                    <button class="button">Напишите нам</button>
+                    <button class="button jsform">Напишите нам</button>
                 </div>
 
             </div>
@@ -212,10 +212,38 @@
 
 
         </section>
-    </footer>
-    <script src="slider.js">
 
-    </script>
+    </footer>
+    <section class="modal-login">
+        <h2>Напишите нам</h2>
+
+        <form action="https://echo.htmlacademy.ru" class="modal-login-form">
+            <div class="modal-login-form-wrapper">
+                <p>
+                    <label for="user-login">Ваше имя:</label>
+                    <input id="user-login" type="text" class="modal-login-form-username" name="login"
+                        placeholder="Имя Фамилия">
+                </p>
+                <p>
+                    <label for="user-email">Ваш e-mail:</label>
+                    <input id="user-email" type="email" class="modal-login-form-email" name="email"
+                        placeholder="email@example.com">
+                </p>
+            </div>
+
+
+            <p>
+                <label for="text">Текст письма</label>
+                <textarea name="text" id="text cols=" 30" rows="5" class="text"
+                    placeholder="В свободной форме"></textarea>
+            </p>
+            <button class="button" type="submit">Отправить</button>
+        </form>
+        <button class="close" type="button">Закрыть</button>
+    </section>
+    <script src="slider.js"></script>
+    <script src="popup.js"></script>
+ 
 </body>
 
 </html>
