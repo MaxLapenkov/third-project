@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,14 @@
     <title>Catalog</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
 </head>
+
 <body>
     <header class="header-inner">
         <div class="main-header container">
@@ -27,7 +35,93 @@
             </nav>
             <h1>Магазин готовых шаблонов</h1>
     </header>
-    <main>111</main>
+    <main class="container main-inner">
+        <aside class="filters">
+            <fieldset>
+                <legend>Стоимость:</legend>
+                <div class="rng-wrapper">
+
+                    <input type="range" min="0" max="15000" value="5000" class="range" oninput="range()" id="range">
+                    
+                    
+                    
+                    <script>
+                        function range() {
+                            event.preventDefault();
+                            
+                            var val = document.querySelector(".range").value;
+                            val1 = (val * 100) / 15000;
+                            var l = document.querySelector(".range");
+                            var count = document.querySelector(".jscount");
+                            l.style.background = ('background>', '-webkit-linear-gradient(left, #00ca74 0%, #00ca74 '+val1+'%,  #d7dcde '+val1+'%, #d7dcde 100%)');
+                            count.value =  val;
+                            
+                        }
+                    </script>
+
+                </div>
+                <div class="second-wrapper">
+                    От <span><input type="text" placeholder="0"></span> До <span><input type="text"
+                            placeholder="15000" class="jscount"></span>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Сетка:</legend>
+                <ul>
+                    <li class="filter-option">
+                        <input type="radio" name="product-group" id="filter-shave" value="shaving"
+                            class="visually-hidden filter-input filter-input-radio" disabled>
+                        <label for="filter-shave">Адаптивная</label>
+                    </li>
+                    <li class="filter-option">
+                        <input type="radio" name="product-group" id="filter-care" value="hair-care"
+                            class="visually-hidden filter-input filter-input-radio">
+                        <label for="filter-care">Фиксированная</label>
+
+                    </li>
+                    <li class="filter-option">
+                        <input type="radio" name="product-group" id="filter-accessories" value="accessories"
+                            class="visually-hidden filter-input filter-input-radio">
+                        <label for="filter-accessories">Резиновая</label>
+
+                    </li>
+                </ul>
+
+            </fieldset>
+            <fieldset>
+                <legend>Особенности:</legend>
+                <ul>
+                    <li class="filter-option">
+                        <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox"
+                            name="Baxter of California" id="Baxter of California">
+                        <label for="Baxter of California">Слайдер</label>
+                    </li>
+                    <li class="filter-option">
+                        <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox"
+                            name="Mr Natty" id="Mr Natty">
+                        <label for="Mr Natty">Блок преимуществ</label>
+                    </li>
+                    <li class="filter-option">
+                        <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox"
+                            name="Suavecito" id="Suavecito">
+                        <label for="Suavecito">Новости</label>
+                    </li>
+                    <li class="filter-option">
+                        <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox"
+                            name="Malin+Goetz" id="Malin+Goetz">
+                        <label for="Malin+Goetz">Галерея</label>
+                    </li>
+                    <li class="filter-option">
+                        <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox"
+                            name="Murray`s" id="Murray`s" disabled>
+                        <label for="Murray`s">Корзина</label>
+                    </li>
+
+                </ul>
+            </fieldset>
+            <button class="filter-button button" type="submit">Показать</button>
+        </aside>
+    </main>
     <footer class="main-footer">
         <h2 class="visually-hidden">Как нас найти</h2>
         <section class="main-footer__map">
@@ -99,7 +193,8 @@
         </form>
         <button class="close" type="button">Закрыть</button>
     </section>
-    
+
     <script src="popup.js"></script>
 </body>
+
 </html>

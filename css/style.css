@@ -746,6 +746,140 @@ header {
   margin-top: 80px;
   padding-bottom: 120px; }
 
+.main-inner {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  .main-inner .filters {
+    width: 300px; }
+    .main-inner .filters ul {
+      list-style: none;
+      line-height: 18px;
+      padding: 0;
+      margin: 0; }
+      .main-inner .filters ul li {
+        margin-bottom: 15px;
+        margin-left: 30px; }
+      .main-inner .filters ul .filter-option {
+        opacity: 0.7; }
+        .main-inner .filters ul .filter-option:hover {
+          opacity: 1; }
+        .main-inner .filters ul .filter-option .filter-input:disabled + label {
+          opacity: 0.4; }
+    .main-inner .filters label {
+      font-size: 16px;
+      line-height: 20px;
+      position: relative;
+      display: block;
+      cursor: pointer;
+      user-select: none; }
+    .main-inner .filters .filter-input-checkbox + label::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-image: url("../img/checkbox-off.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      left: -35px;
+      top: -4px;
+      border-radius: 50%; }
+    .main-inner .filters .filter-input-checkbox:checked + label::before {
+      display: none; }
+    .main-inner .filters .filter-input-checkbox:checked + label::after {
+      width: 25px;
+      height: 25px;
+      background-image: url("../img/checkbox-on.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -31px; }
+    .main-inner .filters .filter-input-radio + label::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border: 3px solid black;
+      left: -30px;
+      top: -3px;
+      border-radius: 50%; }
+    .main-inner .filters .filter-input-radio:checked + label::after {
+      width: 8px;
+      height: 8px;
+      background-color: black;
+      border-radius: 50%;
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: -23px; }
+    .main-inner .filters fieldset {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 50px;
+      border: none; }
+      .main-inner .filters fieldset legend {
+        margin-bottom: 25px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 30px; }
+    .main-inner .filters .rng-wrapper {
+      width: 260px;
+      background-color: #eeeeee; }
+      .main-inner .filters .rng-wrapper .range {
+        box-sizing: border-box;
+        margin: 30px 18px;
+        -webkit-appearance: none;
+        width: 220px;
+        height: 2px;
+        position: relative;
+        background: -webkit-linear-gradient(left, #00ca74 0%, #00ca74 30%, #d7dcde 30%, #d7dcde 100%); }
+        .main-inner .filters .rng-wrapper .range::before {
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: 0;
+          height: 23px;
+          width: 20px;
+          background-image: url("../img/filter-button.svg");
+          background-repeat: no-repeat; }
+        .main-inner .filters .rng-wrapper .range::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          background-image: url("../img/filter-button.svg");
+          background-repeat: no-repeat;
+          cursor: pointer;
+          height: 23px;
+          width: 20px; }
+    .main-inner .filters .second-wrapper {
+      width: 260px;
+      margin-top: 15px; }
+      .main-inner .filters .second-wrapper span {
+        width: 80px;
+        box-sizing: border-box;
+        display: inline-block;
+        background-color: #eeeeee;
+        padding: 10px 15px;
+        text-align: center;
+        margin-left: 13px; }
+        .main-inner .filters .second-wrapper span:first-child {
+          margin-right: 22px; }
+        .main-inner .filters .second-wrapper span input[type="text"] {
+          background-color: inherit;
+          border: none;
+          width: 50px;
+          text-align: center; }
+  .main-inner .filter-button {
+    box-sizing: border-box;
+    width: 260px;
+    background-color: #eeeeee;
+    color: black;
+    font-weight: bold; }
+    .main-inner .filter-button:hover, .main-inner .filter-button:focus {
+      background-color: #dfdfdf; }
+    .main-inner .filter-button:active {
+      background-color: #d5d5d5;
+      color: #959595; }
+
 .none {
   display: none; }
 
